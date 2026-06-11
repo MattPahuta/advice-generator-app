@@ -1,14 +1,13 @@
 import { useAdvice } from "./hooks/useAdvice";
+import LoadingSpinner from "./components/LoadingSpinner";
 import AdviceCard from "./components/AdviceCard";
-
-// const BASE_URL = "https://api.adviceslip.com/advice";
 
 function App() {
   const { advice, loading, error, refetch } = useAdvice();
 
   return (
     <main className="min-h-svh px-4 flex items-center justify-center ">
-      {loading && <p>Loading...</p>}
+      {loading && <LoadingSpinner />}
       {error && (
         <p className="text-lg font-semibold text-red-400">
           An error has occurred: {error}

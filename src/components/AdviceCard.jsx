@@ -7,9 +7,10 @@ function AdviceCard({ advice, loading, onFetchAdvice }) {
       <p className="text-2xl sm:text-3xl font-extrabold tracking-tight">
         "{advice?.advice}"
       </p>
-      {/* decorative image container*/}
       <div className="my-8 sm:my-10">
         <svg
+          aria-hidden="true"
+          focusable="false"
           className="hidden sm:block"
           width="444"
           height="16"
@@ -23,6 +24,8 @@ function AdviceCard({ advice, loading, onFetchAdvice }) {
           </g>
         </svg>
         <svg
+          aria-hidden="true"
+          focusable="false"
           className="sm:hidden"
           width="295"
           height="16"
@@ -36,14 +39,15 @@ function AdviceCard({ advice, loading, onFetchAdvice }) {
           </g>
         </svg>
       </div>
-
-      {/* button */}
       <button
         type="button"
+        aria-label="Get new advice"
         onClick={() => onFetchAdvice()}
         disabled={loading}
-        className="absolute -bottom-8 p-5 bg-green-300 rounded-full cursor-pointer hover:shadow-md hover:bg-green-200 transition-colors outline-0 focus-visible:outline-2 outline-offset-4 outline-green-200 disabled:cursor-not-allowed">
+        className="absolute -bottom-8 p-5 bg-green-300 rounded-full cursor-pointer  outline-0 focus-visible:outline-2 outline-offset-4 outline-green-200 disabled:cursor-not-allowed hover:bg-green-200 active:shadow-[0_0_40px_#53ffaa] transition duration-300">
         <svg
+          aria-hidden="true"
+          focusable="false"
           width="24"
           height="24"
           xmlns="http://www.w3.org/2000/svg">
