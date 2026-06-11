@@ -2,11 +2,11 @@ function AdviceCard({ advice, loading, onFetchAdvice }) {
   return (
     <div className="w-full max-w-135 relative flex flex-col items-center py-9 sm:py-10 px-6 sm:px-10 text-center bg-gray-700 rounded-xl shadow-2xl">
       <h1 className="mb-4 sm:mb-6 text-sm uppercase font-extrabold tracking-widest text-green-300">
-        Advice # {advice?.id}
+        Advice &#35; {advice?.id}
       </h1>
-      <p className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-        "{advice?.advice}"
-      </p>
+      <q className="text-2xl sm:text-3xl font-extrabold tracking-tight leading-snug">
+        {advice?.advice}
+      </q>
       <div className="my-8 sm:my-10">
         <svg
           aria-hidden="true"
@@ -15,7 +15,7 @@ function AdviceCard({ advice, loading, onFetchAdvice }) {
           width="444"
           height="16"
           xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" fill-rule="evenodd">
+          <g fill="none" fillRule="evenodd">
             <path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z" />
             <g transform="translate(212)" fill="#CEE3E9">
               <rect width="6" height="16" rx="3" />
@@ -30,7 +30,7 @@ function AdviceCard({ advice, loading, onFetchAdvice }) {
           width="295"
           height="16"
           xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" fill-rule="evenodd">
+          <g fill="none" fillRule="evenodd">
             <path fill="#4F5D74" d="M0 8h122v1H0zM173 8h122v1H173z" />
             <g transform="translate(138)" fill="#CEE3E9">
               <rect width="6" height="16" rx="3" />
