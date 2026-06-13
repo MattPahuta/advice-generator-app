@@ -7,6 +7,7 @@ function LoadingSpinner() {
       className="mt-12 flex flex-col items-center gap-4 text-ocean-breeze">
       <svg
         aria-hidden="true"
+        focusable="false"
         className="size-12 motion-safe:animate-spin text-green-300"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

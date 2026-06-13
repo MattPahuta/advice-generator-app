@@ -12,7 +12,7 @@ export function useAdvice() {
       setAdvice(null);
       setLoading(true);
       setError("");
-      // cache-busting query to ensure a fresh request, adressing Advice Slip API caching
+
       const response = await fetch(`${BASE_URL}?timestamp=${Date.now()}`);
 
       if (!response.ok) {
