@@ -1,6 +1,6 @@
 # Advice Generator - A Frontend Mentor Design Challenge
 
-![project screenshot]()
+![project screenshot](./src/assets/images/AdviceGenerator_SS.jpg)
 
 ## Table of Contents
 
@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- [Frontend Mentor Solution URL]()
-- [live demo site]()
+- [Frontend Mentor Solution Page]()
+- [live demo site](https://advice-generator-app-mocha-nine.vercel.app/)
 
 
 ### Tech Stack
@@ -53,7 +53,7 @@ const { advice, loading, error, refetch } = useAdvice();
 
 Some pretty standard `useEffect` code deals with the initial fetch request to the Advice Slip API, but I decided to go with a dedicated `useCallback` for the method to pass the fetch logic to the AdviceCard component, preventing the function from being recreated every render.
 
-Executing a standard fetch request via the button often appears to do nothing at all because of the Advice Slip caching. The `Date.now()` addition for the URL addresses this.
+Executing a standard fetch request via the button often appears to do nothing at all because of the Advice Slip API caching. The `Date.now()` addition for the URL addresses this.
 
 ```js
 const fetchAdvice = useCallback(async () => {
@@ -89,9 +89,7 @@ const fetchAdvice = useCallback(async () => {
 
 ### Accessibility
 
-It's a simple enough app, but I made a few accessibility mistakes when I originally completed this challenge several years ago. 
-
-Most notably, the 'dice' button needs to be a `<button>` with proper focus styles (I originally made it an anchor tag for some reason).
+It's a simple enough app, but I made a few accessibility mistakes when I originally completed this challenge several years ago. Most notably, the 'dice' button needs to be a `<button>` with proper focus styles.
 
 With a simple component like this, it's sometimes tricky to determine what constitutes an actual heading. Do I reach for the most prominent text on the screen (the actual quote), or go with adding a hidden h1 with the app's descriptive title (Advice Generator App)? In the end, tried not to overthink it and just made the Advice ID the heading. It more or less describes the content coming after, and I wanted to ensure I used the `<q>` tag for the quote, something I failed to do in the first iteration of this challenge.
 
