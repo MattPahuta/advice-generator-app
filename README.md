@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- [Frontend Mentor Solution Page]()
+- [Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/random-advice-generator-built-with-react-WOJwIFDmJs)
 - [live demo site](https://advice-generator-app-mocha-nine.vercel.app/)
 
 
